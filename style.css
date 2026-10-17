@@ -113,3 +113,6 @@ body {
 
 /* Driver page keeps working with the same file */
 header { background: var(--ink); color: #fff; padding: 16px; text-align: center; border-bottom: 6px solid var(--yellow); }
+@media (max-width: 699px) {
+  .leaflet-bottom { bottom: 190px; }
+}
