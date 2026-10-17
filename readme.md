@@ -3,6 +3,9 @@
 A real-time web app that shows students where the college bus is, live on a map.
 
 **Live demo:** https://Akarsh-Shukla.github.io/College-Bus-Tracker/
+**Recorded Demo**
+
+https://github.com/user-attachments/assets/1606554a-aeab-46cc-adcc-da4013523b0a
 
 ![Student view](screenshots/student.png)
 
