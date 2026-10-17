@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver - Bus Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .panel { max-width: 380px; margin: 24px auto; padding: 20px; background: white; border-radius: 10px; }
+    .panel input, .panel button { width: 100%; padding: 12px; margin-top: 10px; font-size: 16px; }
+    .hidden { display: none; }
+    #msg { margin-top: 14px; font-size: 14px; color: #444; }
+  </style>
+</head>
+<body>
+  <header><h1>🚌 Driver Panel</h1></header>
+
+  <div class="panel" id="loginBox">
+    <input id="email" type="email" placeholder="Driver email" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="loginBtn">Log in</button>
+  </div>
+
+  <div class="panel hidden" id="trackBox">
+    <button id="startBtn">▶ Start sharing location</button>
+    <button id="stopBtn" class="hidden">⏹ Stop sharing</button>
+    <button id="logoutBtn">Log out</button>
+  </div>
+
+  <p id="msg" style="text-align:center"></p>
+  <script type="module" src="driver.js"></script>
+</body>
+</html>

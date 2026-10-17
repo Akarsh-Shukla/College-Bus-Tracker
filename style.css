@@ -1,0 +1,115 @@
+:root {
+  --yellow: #ffc72c;
+  --ink: #22303c;
+  --paper: #f3f6f8;
+  --green: #1e9e5a;
+  --red: #d64545;
+  --grey: #7b8794;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Archivo", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* Map fills the whole screen */
+#map {
+  position: fixed;
+  inset: 0;
+}
+
+/* The floating board */
+.board {
+  position: fixed;
+  z-index: 1100;
+  left: 12px;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  padding: 16px 18px 18px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 14px;
+  border-top: 6px solid var(--yellow);
+  box-shadow: 0 10px 30px rgba(34, 48, 60, 0.35);
+}
+
+.brand {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--yellow);
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b8c4cf;
+}
+
+.board h1 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+
+.distance {
+  font-size: 16px;
+  font-weight: 500;
+  color: #dbe4ea;
+  min-height: 1.2em;
+  margin-top: 4px;
+}
+
+/* Status pill */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 700;
+}
+.status::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--grey);
+}
+.status[data-state="live"]::before { background: var(--green); box-shadow: 0 0 0 4px rgba(30, 158, 90, 0.3); }
+.status[data-state="lost"]::before { background: var(--yellow); }
+.status[data-state="offline"]::before { background: var(--red); }
+
+/* The bus on the map */
+.bus-icon {
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Bigger screens: board becomes a side panel */
+@media (min-width: 700px) {
+  .board {
+    left: 20px;
+    right: auto;
+    top: 20px;
+    bottom: auto;
+    width: 340px;
+  }
+}
+
+/* Driver page keeps working with the same file */
+header { background: var(--ink); color: #fff; padding: 16px; text-align: center; border-bottom: 6px solid var(--yellow); }
