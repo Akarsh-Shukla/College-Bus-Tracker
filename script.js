@@ -3,10 +3,10 @@ import { ref, onValue } from "https://www.gstatic.com/firebasejs/10.14.1/firebas
 
 // ---- Your route (keep your real coordinates here) ----
 const stops = [
-  { name: "Main Gate (College)", lat: 26.401394, lng:80.354773 },
-  { name: "Stop A", lat: 26.406450, lng:80.354403 },
-  { name: "Stop B", lat: 26.3448626, lng:80.4501424 },
-  { name: "Stop C", lat: 26.398085, lng:80.354908 },
+  { name: "Main Gate (College)", lat: 26.3448626, lng:80.4501424 },
+  { name: "Stop A", lat: 26.411467, lng:80.386982 },
+  { name: "Stop B", lat: 26.4010635, lng:80.272814 },
+  { name: "Stop C", lat: 26.4615839, lng:80.3224565 },
 ];
 
 const map = L.map("map", { zoomControl: false }).setView([stops[0].lat, stops[0].lng], 14);
